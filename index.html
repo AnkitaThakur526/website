@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Registration</title>
+    <script>
+    
+        function check_input()
+        {
+          
+          if(document.getElementById("inputPassword").value == 1234)
+          {
+              sessionStorage.setItem("USERNAME",document.getElementById("inputuser").value);
+              // sessionStorage.setItem("SECONDNUMBER",document.getElementById("t2").value);
+              //document.getElementById("divResult").innerText ="Data saved in Session Storage";
+                    
+      
+              // document.getElementById("t1").value = sessionStorage.getItem("USERNAME");
+              //document.getElementById("t2").value = sessionStorage.getItem("SECONDNUMBER");
+          }
+          else
+          {
+            document.getElementById("divResult").innerText = 'Invalid Password'
+          }
+                
+        }
+        
+    </script>
+  </head>
+  <body>
+      
+    <div class="col-sm-12 mt-5">
+        <form style="text-align: center" action="/about.html" method="GET">
+            <div class="row mb-3">
+              <label for="inputuser" class="col-sm-3 col-form-label">User Name: </label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="inputuser" placeholder="User Name" Required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+              <div class="col-sm-5">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" Required>
+              </div>
+            </div>
+            <div class="divResult">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="check_input()" href="about.html">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Forget password<a href="forgetpass.html"> click here</a>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
